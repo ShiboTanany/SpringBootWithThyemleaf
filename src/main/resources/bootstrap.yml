@@ -1,0 +1,12 @@
+#env:
+#  config:
+#    localhost: http://revo:revo@localhost:8888
+##    remotehost: http://revo:revo@revotubeconfig.cfapps.io
+#spring:
+#  application:
+#    name: zuul
+#  cloud:
+#    config:
+#      uri: http://revo:revo@revotubeconfig.cfapps.io
+#  profiles:
+#    active: default,prod

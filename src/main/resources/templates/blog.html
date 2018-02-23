@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Personal Website</title>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" th:href="@{/css/default.css}" href="../static/css/default.css"/>
+    <link rel="stylesheet" th:href="@{/css/layout.css}" href="../static/css/layout.css"/>
+    <link rel="stylesheet" th:href="@{/css/media-queries.css}" href="../static/css/media-queries.css"/>
+    <link rel="stylesheet" th:href="@{/css/magnific-popup.css}" href="../static/css/magnific-popup.css"/>
+
+    <!-- Script
+    ================================================== -->
+    <script th:src="@{/js/modernizr.js}" src="../static/js/modernizr.js"/>
+
+    <!-- Favicons
+     ================================================== -->
+    <link rel="shortcut icon" th:href="@{/images/favicon.png}" href="../static/images/favicon.png"/>
+
+</head>
+<body>
+<!-- Header
+   ================================================== -->
+<header id="home">
+
+    <nav id="nav-wrap">
+
+        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+        <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a  th:href="@{/#about}">About</a></li>
+            <li><a  th:href="@{/#resume}">Resume</a></li>
+            <li><a  th:href="@{/#portfolio}">Works</a></li>
+            <li><a  th:href="@{/#testimonials}">Testimonials</a></li>
+            <li><a  th:href="@{/#contact}">Contact</a></li>
+
+        </ul> <!-- end #nav -->
+
+    </nav>
+</header>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/uery-migrate-1.2.1.min.js"
+        th:src="@{/js/jquery-migrate-1.2.1.min.js}"></script>
+
+<script src="../static/js/jquery.flexslider.js" th:src="@{/js/jquery.flexslider.js}"></script>
+<script src="../static/js/waypoints.js" th:src="@{/js/waypoints.js}"></script>
+<script src="../static/js/jquery.fittext.js" th:src="@{/js/jquery.fittext.js}"></script>
+<script src="../static/js/magnific-popup.js" th:src="@{/magnific-popup.js}"></script>
+<script src="../static/js/init.js" th:src="@{/js/init.js}"></script>
+</body>
+</html>

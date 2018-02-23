@@ -1,0 +1,767 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Personal Website</title>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" th:href="@{/css/default.css}" href="../static/css/default.css"/>
+    <link rel="stylesheet" th:href="@{/css/layout.css}" href="../static/css/layout.css"/>
+    <link rel="stylesheet" th:href="@{/css/media-queries.css}" href="../static/css/media-queries.css"/>
+    <link rel="stylesheet" th:href="@{/css/magnific-popup.css}" href="../static/css/magnific-popup.css"/>
+
+    <!-- Script
+    ================================================== -->
+    <script th:src="@{/js/modernizr.js}" src="../static/js/modernizr.js"/>
+
+    <!-- Favicons
+     ================================================== -->
+    <link rel="shortcut icon" th:href="@{/images/favicon.png}" href="../static/images/favicon.png"/>
+
+</head>
+<body>
+<!-- Header
+   ================================================== -->
+<header id="home">
+
+    <nav id="nav-wrap">
+
+        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+        <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+            <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            <li><a target="_self" th:href="@{/blog}">Blog</a></li>
+        </ul> <!-- end #nav -->
+
+    </nav> <!-- end #nav-wrap -->
+
+    <div class="row banner">
+        <div class="banner-text">
+            <h1 class="responsive-headline"> I'm Shaaban Ebrahim</h1>
+            <h3>I'm <span>Java </span>and <span> Android Developer </span>
+                creating <span>Desktop</span> ,<span>Web</span> ,<span>Enterprise</span> and <span>Mobile</span>
+                Applications
+                Let's <a class="smoothscroll" href="#about">start
+                    scrolling</a>
+                and know more <a class="smoothscroll" href="#about">about me</a>.</h3>
+            <hr/>
+            <ul class="social">
+                <li><a target="_blank" href="https://www.facebook.com/ShiboAltnany"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a target="_blank" href="https://twitter.com/ShibOoAltanany"><i class="fa fa-twitter"></i></a></li>
+                <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+                <li><a target="_blank" href="https://www.linkedin.com/in/shaabanaltanany"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <!--<li><a href="#"><i class="fa fa-instagram"></i></a></li>-->
+                <!--<li><a href="#"><i class="fa fa-dribbble"></i></a></li>-->
+                <!--<li><a href=""><i class="fa fa-skype"></i></a></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <p class="scrolldown">
+        <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+    </p>
+
+</header> <!-- Header End -->
+
+
+<!-- About Section
+  ================================================== -->
+<section id="about">
+
+    <div class="row">
+
+        <div class="three columns">
+
+            <img class="profile-pic" th:src="@{/images/profile.jpg}"/>
+
+        </div>
+
+        <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>a Software Engineer who has passion to learn more IT and programming from many
+                points of view not Back end Developer. but as Software Engineer who must know about
+                the current technologies,know how to use it whenever he wants
+                and he never stops learning</p>
+
+            <div class="row">
+
+                <div class="columns contact-details">
+
+                    <h2>Contact Details</h2>
+                    <p class="address">
+                        <span>Egypt</span><br></br>
+                        <span>El behira,Damanhour<br></br>
+						      mansha't al habishi
+                     </span><br></br>
+                        <span>+201142803256</span><br></br>
+                        <span>+201002871797</span><br></br>
+                        <span>shaaban.altanany@gmail.com</span>
+                    </p>
+
+                </div>
+
+                <div class="columns download">
+                    <p>
+                        <a th:target="_blank" th:href="@{/files/cv}" class="button"><i class="fa fa-download"></i>View
+                            Resume</a>
+                    </p>
+                </div>
+
+            </div> <!-- end row -->
+
+        </div> <!-- end .main-col -->
+
+    </div>
+
+</section> <!-- About Section End-->
+
+
+<!-- Resume Section
+  ================================================== -->
+<section id="resume">
+
+    <div class="row education">
+
+        <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+
+            <div class="row item">
+
+                <div class="twelve columns">
+
+                    <h3>Information Technology Institute,MCIT,Egypt </h3>
+                    <p>
+                    <p class="info">9 month Diploma<span>&bull;</span> <em class="date">October 2016</em></p>
+
+                    Enterprise And Web Applications track <a
+                        th:href="@{http://admission.iti.gov.eg/Admission/PTPprogram/intake36/EWDtrack}">list of
+                    courses</a><br></br>
+                    <b>Grade</b>: Excellent<br></br>
+                    <b>Graduation Project</b>: Excellent<br></br>
+                    <b>Product Catalog </b>
+                    </p>
+                </div>
+
+
+                <div class="twelve columns">
+
+                    <h3>University of Menofia </h3>
+                    <p class="info">Bachelor of Computer Science<span>&bull;</span> <em class="date">June 2016</em></p>
+
+                    Studied Computer Science as a major and Information Science as a minor<br></br>
+                    <b>Grade</b>: Good<br></br>
+                    <b>Graduation Project</b>: Excellent<br></br>
+                    <b>Breast cancer prediction</b>
+                </div>
+
+
+            </div>
+
+        </div> <!-- item end -->
+
+
+    </div>
+
+</section>
+
+
+<div class="row work">
+
+    <div class="three columns header-col">
+        <h1><span>Work</span></h1>
+    </div>
+
+    <div class="nine columns main-col">
+
+        <div class="row item">
+
+            <div class="twelve columns">
+
+                <h2>Software Engineer</h2>
+                <p class="info">Fawry Integrated Services <span>&bull;</span> <em class="date">December 2017 -
+                    Present</em></p>
+                <p>
+                    Working in payment filed using latest technologies like <b>Java</b> ,<b>Spring framework</b> ,
+                    <b>Rest Web Services</b> ,<b>Soap Web Services</b> ,<b>Angular2 </b>and
+                    <b>EJB3</b>
+                </p>
+
+            </div>
+
+        </div> <!-- item end -->
+
+        <div class="row item">
+
+            <div class="twelve columns">
+
+                <h2>Software Engineer</h2>
+                <p class="info">Egyptian Banks Company<span>&bull;</span> <em class="date">July 2017 - December
+                    2017</em></p>
+                <p>
+                    Working in payment filed using technologies like <b>Java</b> ,<b>JPOS</b>,<b>Hibernate</b>
+                    ,<b>JMS</b> ,<b>Security
+                    Concepts</b>
+                    and <b>EJB 3</b>
+                </p>
+
+            </div>
+        </div> <!-- item end -->
+
+    </div> <!-- main-col end -->
+
+</div> <!-- End Work -->
+
+
+<div class="row skill">
+
+    <div class="three columns header-col">
+        <h1><span>Skills</span></h1>
+    </div>
+
+    <div class="nine columns main-col">
+
+        <p>I have solid understanding for <b>Database Design concepts</b> ,<b>UML concepts</b> ,<b>OOP concepts </b>and
+            <b>Design patterns</b>
+            in addition to <b>HTML</b> ,<b>CSS</b> ,<b>Java Script</b> ,<b>Angular 2 /4 </b> ,<b>Java</b> ,<b>JDBC</b> ,<b>JavaFX</b>
+            ,<b>RMI</b> ,
+            <b>Servlet</b> ,<b>JSP</b> ,<b>JSF</b> ,
+            <b>Hibernate</b> ,<b>JPA</b> ,<b>EJB</b> ,<b>Spring core</b> ,<b>Spring Aop</b> ,<b>Spring Rest</b> ,<b>Spring
+                MVC</b> ,
+            <b>Spring cache</b> ,<b>Spring Security</b> ,<b>Spring boot</b> ,<b>thymeleaf</b> ,<b>Spring Messaging</b> ,<b>Spring
+                data</b>
+            ,<b>Spring JDBC</b> ,<b>Spring JPA </b> ,<b>Rest Web Services</b> and <b>SOAP Web Services</b>
+        </p>
+
+        <b>Technologies in brief </b>
+        <div class="bars">
+            <div th:if="${skills != null}">
+                <ul class="skills" th:each="smokeTest : ${skills}">
+
+                    <h3 class="skillName" th:bgcolor="white" th:text="${smokeTest.name}"></h3>
+                    <li><span class="bar-expand " th:classappend="${smokeTest.width}"></span></li>
+                </ul>
+            </div>
+
+        </div><!-- end skill-bars -->
+
+    </div> <!-- main-col end -->
+
+</div> <!-- End skills -->
+
+
+<section id="portfolio">
+
+    <div class="row">
+
+        <div class="twelve columns collapsed">
+
+            <h1>Check Out Some of My Works.</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-01" title="">
+                            <img alt="" src="images/portfolio/coffee.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Coffee</h5>
+                                    <p>Illustrration</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div> <!-- item end -->
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-02" title="">
+                            <img alt="" src="images/portfolio/console.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Console</h5>
+                                    <p>Web Development</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div> <!-- item end -->
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-03" title="">
+                            <img alt="" src="images/portfolio/judah.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Judah</h5>
+                                    <p>Webdesign</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div> <!-- item end -->
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-04" title="">
+                            <img alt="" src="images/portfolio/into-the-light.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Into The Light</h5>
+                                    <p>Photography</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div> <!-- item end -->
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-05" title="">
+                            <img alt="" src="images/portfolio/farmerboy.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Farmer Boy</h5>
+                                    <p>Branding</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div> <!-- item end -->
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-06" title="">
+                            <img alt="" src="images/portfolio/girl.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Girl</h5>
+                                    <p>Photography</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div> <!-- item end -->
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-07" title="">
+                            <img alt="" src="images/portfolio/origami.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Origami</h5>
+                                    <p>Illustrration</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div> <!-- item end -->
+
+                <div class="columns portfolio-item">
+                    <div class="item-wrap">
+
+                        <a href="#modal-08" title="">
+                            <img alt="" src="images/portfolio/retrocam.jpg"></img>
+                            <div class="overlay">
+                                <div class="portfolio-item-meta">
+                                    <h5>Retrocam</h5>
+                                    <p>Web Development</p>
+                                </div>
+                            </div>
+                            <div class="link-icon"><i class="icon-plus"></i></div>
+                        </a>
+
+                    </div>
+                </div>  <!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+        </div> <!-- twelve columns end -->
+
+
+        <div id="modal-01" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Coffee Cup</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-01 End -->
+
+        <div id="modal-02" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Console</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-02 End -->
+
+        <div id="modal-03" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Judah</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-03 End -->
+
+        <div id="modal-04" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Into the Light</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-04 End -->
+
+        <div id="modal-05" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Farmer Boy</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-05 End -->
+
+        <div id="modal-06" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Girl</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-06 End -->
+
+        <div id="modal-07" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Origami</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-07 End -->
+
+        <div id="modal-08" class="popup-modal mfp-hide">
+
+            <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt=""></img>
+
+            <div class="description-box">
+                <h4>Retrocam</h4>
+                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
+            </div>
+
+            <div class="link-box">
+                <a href="http://www.behance.net">Details</a>
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div><!-- modal-01 End -->
+
+
+    </div> <!-- row End -->
+
+</section> <!-- Portfolio Section End-->
+
+
+<section id="testimonials">
+
+    <div class="text-container">
+
+        <div class="row">
+
+            <div class="two columns header-col">
+
+                <h1><span>Client Testimonials</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+                <div class="flexslider">
+
+                    <ul class="slides">
+
+                        <h1>Never Give up</h1>
+                    </ul>
+
+                </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+        </div> <!-- row ends -->
+
+    </div>  <!-- text-container ends -->
+
+</section> <!-- Testimonials Section End-->
+
+
+<section id="contact">
+
+    <div class="row section-head">
+
+        <div class="two columns header-col">
+
+            <h1><span>Get In Touch.</span></h1>
+
+        </div>
+
+        <div class="ten columns">
+
+            <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                laudantium, totam rem aperiam,
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="eight columns">
+
+            <!-- form -->
+            <form action="/contactUs" method="post" id="contactForm" name="contactForm">
+                <fieldset>
+
+                    <div>
+                        <label for="contactName">Name <span class="required">*</span></label>
+                        <input type="text" value="" size="35" id="contactName" name="contactName"></input>
+                    </div>
+
+                    <div>
+                        <label for="contactEmail">Email <span class="required">*</span></label>
+                        <input type="text" value="" size="35" id="contactEmail" name="contactEmail"></input>
+                    </div>
+
+                    <div>
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" value="" size="35" id="contactSubject" name="contactSubject"></input>
+                    </div>
+
+                    <div>
+                        <label for="contactMessage">Message <span class="required">*</span></label>
+                        <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                    </div>
+
+                    <div>
+                        <button class="submit">Submit</button>
+                        <span id="image-loader">
+                        <img alt="" src="images/loader.gif"></img>
+                     </span>
+                    </div>
+
+                </fieldset>
+            </form> <!-- Form End -->
+
+            <!-- contact-warning -->
+            <div id="message-warning"> Error boy</div>
+            <!-- contact-success -->
+            <div id="message-success">
+                <i class="fa fa-check"></i>Your message was sent, thank you!<br></br>
+            </div>
+
+        </div>
+
+
+        <aside class="four columns footer-widgets">
+
+            <div class="widget widget_contact">
+
+                <h4>Address and Phone</h4>
+                <p class="address">
+                    Jonathan Doe<br></br>
+                    1600 Amphitheatre Parkway <br></br>
+                    Mountain View, CA 94043 US<br></br>
+                    <span>(123) 456-7890</span>
+                </p>
+
+            </div>
+
+            <div class="widget widget_tweets">
+
+                <h4 class="widget-title">Latest Tweets</h4>
+
+                <ul id="twitter">
+                    <li>
+                        <span>
+                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">2 Days Ago</a></b>
+                    </li>
+                    <li>
+                        <span>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+                        <b><a href="#">3 Days Ago</a></b>
+                    </li>
+                </ul>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section> <!-- Contact Section End-->
+
+
+<!-- footer
+================================================== -->
+<footer>
+
+    <div class="row">
+
+        <div class="twelve columns">
+
+            <ul class="social-links">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+            <ul class="copyright">
+                <li>&copy; Copyright 2014 CeeVee</li>
+                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+            </ul>
+
+        </div>
+
+        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+    </div>
+
+</footer> <!-- Footer End-->
+
+
+<!-- Java Script
+  ================================================== -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="../static/js/uery-migrate-1.2.1.min.js"
+        th:src="@{/js/jquery-migrate-1.2.1.min.js}"></script>
+
+<script src="../static/js/jquery.flexslider.js" th:src="@{/js/jquery.flexslider.js}"></script>
+<script src="../static/js/waypoints.js" th:src="@{/js/waypoints.js}"></script>
+<script src="../static/js/jquery.fittext.js" th:src="@{/js/jquery.fittext.js}"></script>
+<script src="../static/js/magnific-popup.js" th:src="@{/magnific-popup.js}"></script>
+<script src="../static/js/init.js" th:src="@{/js/init.js}"></script>
+</body>
+</html>
