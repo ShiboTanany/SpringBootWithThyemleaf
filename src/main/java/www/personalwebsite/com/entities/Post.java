@@ -12,6 +12,12 @@ public class Post {
     private String topic;
     private String description;
 
+
+    public Post(String topic, String description) {
+        this.topic = topic;
+        this.description = description;
+    }
+
     public int getId() {
         return id;
     }

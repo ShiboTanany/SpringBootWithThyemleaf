@@ -1034,3 +1034,27 @@ footer .social-links li:first-child { margin-left: 0; }
 
 
 }
+
+.postWrap{
+    background-color: #CCCCCC;
+    width: 900px;
+    height: inherit;
+    display: inline-block;
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+
+    /* For IE 7 */
+    zoom: 1;
+    *display: inline;
+
+    /* For Mozilla Firefox < 3.0 */
+    display:-moz-inline-stack;
+}
+
+.topicDiv{
+    padding-bottom:10px ;
+    padding-top: 30px;
+
+}

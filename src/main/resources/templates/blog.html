@@ -37,17 +37,44 @@
         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a  th:href="@{/#about}">About</a></li>
-            <li><a  th:href="@{/#resume}">Resume</a></li>
-            <li><a  th:href="@{/#portfolio}">Works</a></li>
-            <li><a  th:href="@{/#testimonials}">Testimonials</a></li>
-            <li><a  th:href="@{/#contact}">Contact</a></li>
+            <li class="current"><a class="smoothscroll" th:href="@{/#home}">Home</a></li>
+            <li><a th:href="@{/#about}">About</a></li>
+            <li><a th:href="@{/#resume}">Resume</a></li>
+            <li><a th:href="@{/#portfolio}">Works</a></li>
+            <li><a th:href="@{/#testimonials}">Testimonials</a></li>
+            <li><a th:href="@{/#contact}">Contact</a></li>
 
         </ul> <!-- end #nav -->
 
     </nav>
+
+
 </header>
+
+
+<section id="portfolio">
+
+    <div class="row">
+
+        <div class="twelve columns collapsed">
+            <div th:each="post : ${posts}">
+                <h3 class="topicDiv" th:text="${post.topic}"></h3>
+                <div class="postWrap">
+                    <div>
+                        <div class="postWrap">
+                            <p th:text="${post.description}"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</section>
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="../static/js/uery-migrate-1.2.1.min.js"

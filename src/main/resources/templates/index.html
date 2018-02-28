@@ -12,7 +12,7 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" th:href="@{/css/default.css}" href="../static/css/default.css"/>
+    <link rel="stylesheet" th:href="@{css/default.css}" href="../static/css/default.css"/>
     <link rel="stylesheet" th:href="@{/css/layout.css}" href="../static/css/layout.css"/>
     <link rel="stylesheet" th:href="@{/css/media-queries.css}" href="../static/css/media-queries.css"/>
     <link rel="stylesheet" th:href="@{/css/magnific-popup.css}" href="../static/css/magnific-popup.css"/>
@@ -43,7 +43,7 @@
             <li><a class="smoothscroll" href="#portfolio">Works</a></li>
             <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
-            <li><a target="_self" th:href="@{/blog}">Blog</a></li>
+            <li><a target="_self" th:href="@{/users/blog}">Blog</a></li>
         </ul> <!-- end #nav -->
 
     </nav> <!-- end #nav-wrap -->
@@ -278,292 +278,296 @@
             <h1>Check Out Some of My Works.</h1>
 
             <!-- portfolio-wrapper -->
-            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-01" title="">
-                            <img alt="" src="images/portfolio/coffee.jpg"></img>
+            <div  id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf"  >
+                <div  class="columns portfolio-item" th:each="project : ${projects}" >
+                    <div class="item-wrap" >
+                        <a th:href="${project.GithubLink}" title="Project Link">
+                            <img alt="" th:src="${project.imageUrl}"></img>
                             <div class="overlay">
                                 <div class="portfolio-item-meta">
-                                    <h5>Coffee</h5>
-                                    <p>Illustrration</p>
+                                    <h3 th:text="${project.name}"><h6 th:text="${project.createdTime}"></h6></h3>
+                                    <p th:text="${project.description}"></p>
                                 </div>
                             </div>
                             <div class="link-icon"><i class="icon-plus"></i></div>
                         </a>
+                        <!--<a th:href="${project.GithubLink}" title="link">-->
+                            <!--<img alt="" th:src="${project.imageUrl}" ></img>-->
+                            <!--<div class="overlay">-->
+                                <!--<div class="portfolio-item-meta">-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="link-icon"><i class="icon-plus"></i></div>-->
+                        <!--</a>-->
 
                     </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-02" title="">
-                            <img alt="" src="images/portfolio/console.jpg"></img>
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Console</h5>
-                                    <p>Web Development</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-03" title="">
-                            <img alt="" src="images/portfolio/judah.jpg"></img>
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Judah</h5>
-                                    <p>Webdesign</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-04" title="">
-                            <img alt="" src="images/portfolio/into-the-light.jpg"></img>
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Into The Light</h5>
-                                    <p>Photography</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-05" title="">
-                            <img alt="" src="images/portfolio/farmerboy.jpg"></img>
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Farmer Boy</h5>
-                                    <p>Branding</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-06" title="">
-                            <img alt="" src="images/portfolio/girl.jpg"></img>
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Girl</h5>
-                                    <p>Photography</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-07" title="">
-                            <img alt="" src="images/portfolio/origami.jpg"></img>
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Origami</h5>
-                                    <p>Illustrration</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div> <!-- item end -->
-
-                <div class="columns portfolio-item">
-                    <div class="item-wrap">
-
-                        <a href="#modal-08" title="">
-                            <img alt="" src="images/portfolio/retrocam.jpg"></img>
-                            <div class="overlay">
-                                <div class="portfolio-item-meta">
-                                    <h5>Retrocam</h5>
-                                    <p>Web Development</p>
-                                </div>
-                            </div>
-                            <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                    </div>
-                </div>  <!-- item end -->
-
-            </div> <!-- portfolio-wrapper end -->
-
-        </div> <!-- twelve columns end -->
+                </div>
 
 
-        <div id="modal-01" class="popup-modal mfp-hide">
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt=""></img>
 
-            <div class="description-box">
-                <h4>Coffee Cup</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
             </div>
+        </div> <!-- item end -->
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+        <!--<div class="columns portfolio-item">-->
+        <!--<div class="item-wrap">-->
 
-        </div><!-- modal-01 End -->
+        <!--<a href="#modal-02" title="">-->
+        <!--<img alt="" src="images/portfolio/console.jpg"></img>-->
+        <!--<div class="overlay">-->
+        <!--<div class="portfolio-item-meta">-->
+        <!--<h5>Console</h5>-->
+        <!--<p>Web Development</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="link-icon"><i class="icon-plus"></i></div>-->
+        <!--</a>-->
 
-        <div id="modal-02" class="popup-modal mfp-hide">
+        <!--</div>-->
+        <!--</div> &lt;!&ndash; item end &ndash;&gt;-->
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt=""></img>
+        <!--<div class="columns portfolio-item">-->
+        <!--<div class="item-wrap">-->
 
-            <div class="description-box">
-                <h4>Console</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
-            </div>
+        <!--<a href="#modal-03" title="">-->
+        <!--<img alt="" src="images/portfolio/judah.jpg"></img>-->
+        <!--<div class="overlay">-->
+        <!--<div class="portfolio-item-meta">-->
+        <!--<h5>Judah</h5>-->
+        <!--<p>Webdesign</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="link-icon"><i class="icon-plus"></i></div>-->
+        <!--</a>-->
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+        <!--</div>-->
+        <!--</div> &lt;!&ndash; item end &ndash;&gt;-->
 
-        </div><!-- modal-02 End -->
+        <!--<div class="columns portfolio-item">-->
+        <!--<div class="item-wrap">-->
 
-        <div id="modal-03" class="popup-modal mfp-hide">
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt=""></img>
 
-            <div class="description-box">
-                <h4>Judah</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Branding</span>
-            </div>
+        <!--</div>-->
+        <!--</div> &lt;!&ndash; item end &ndash;&gt;-->
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+        <!--<div class="columns portfolio-item">-->
+        <!--<div class="item-wrap">-->
 
-        </div><!-- modal-03 End -->
+        <!--<a href="#modal-05" title="">-->
+        <!--<img alt="" src="images/portfolio/farmerboy.jpg"></img>-->
+        <!--<div class="overlay">-->
+        <!--<div class="portfolio-item-meta">-->
+        <!--<h5>Farmer Boy</h5>-->
+        <!--<p>Branding</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="link-icon"><i class="icon-plus"></i></div>-->
+        <!--</a>-->
 
-        <div id="modal-04" class="popup-modal mfp-hide">
+        <!--</div>-->
+        <!--</div> &lt;!&ndash; item end &ndash;&gt;-->
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt=""></img>
+        <!--<div class="columns portfolio-item">-->
+        <!--<div class="item-wrap">-->
 
-            <div class="description-box">
-                <h4>Into the Light</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Photography</span>
-            </div>
+        <!--<a href="#modal-06" title="">-->
+        <!--<img alt="" src="images/portfolio/girl.jpg"></img>-->
+        <!--<div class="overlay">-->
+        <!--<div class="portfolio-item-meta">-->
+        <!--<h5>Girl</h5>-->
+        <!--<p>Photography</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="link-icon"><i class="icon-plus"></i></div>-->
+        <!--</a>-->
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+        <!--</div>-->
+        <!--</div> &lt;!&ndash; item end &ndash;&gt;-->
 
-        </div><!-- modal-04 End -->
+        <!--<div class="columns portfolio-item">-->
+        <!--<div class="item-wrap">-->
 
-        <div id="modal-05" class="popup-modal mfp-hide">
+        <!--<a href="#modal-07" title="">-->
+        <!--<img alt="" src="images/portfolio/origami.jpg"></img>-->
+        <!--<div class="overlay">-->
+        <!--<div class="portfolio-item-meta">-->
+        <!--<h5>Origami</h5>-->
+        <!--<p>Illustrration</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="link-icon"><i class="icon-plus"></i></div>-->
+        <!--</a>-->
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt=""></img>
+        <!--</div>-->
+        <!--</div> &lt;!&ndash; item end &ndash;&gt;-->
 
-            <div class="description-box">
-                <h4>Farmer Boy</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
-            </div>
+        <!--<div class="columns portfolio-item">-->
+        <!--<div class="item-wrap">-->
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+        <!--<a href="#modal-08" title="">-->
+        <!--<img alt="" src="images/portfolio/retrocam.jpg"></img>-->
+        <!--<div class="overlay">-->
+        <!--<div class="portfolio-item-meta">-->
+        <!--<h5>Retrocam</h5>-->
+        <!--<p>Web Development</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="link-icon"><i class="icon-plus"></i></div>-->
+        <!--</a>-->
 
-        </div><!-- modal-05 End -->
+        <!--</div>-->
+        <!--</div>  &lt;!&ndash; item end &ndash;&gt;-->
 
-        <div id="modal-06" class="popup-modal mfp-hide">
+    <!--</div> &lt;!&ndash; portfolio-wrapper end &ndash;&gt;-->
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt=""></img>
+    <!--</div> &lt;!&ndash; twelve columns end &ndash;&gt;-->
 
-            <div class="description-box">
-                <h4>Girl</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Photography</span>
-            </div>
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+    <div id="modal-01" class="popup-modal mfp-hide">
 
-        </div><!-- modal-06 End -->
+        <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt=""></img>
 
-        <div id="modal-07" class="popup-modal mfp-hide">
+        <div class="description-box">
+            <h4>Coffee Cup</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+        </div>
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt=""></img>
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
 
-            <div class="description-box">
-                <h4>Origami</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
-            </div>
+    </div><!-- modal-01 End -->
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+    <div id="modal-02" class="popup-modal mfp-hide">
 
-        </div><!-- modal-07 End -->
+        <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt=""></img>
 
-        <div id="modal-08" class="popup-modal mfp-hide">
+        <div class="description-box">
+            <h4>Console</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+        </div>
 
-            <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt=""></img>
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
 
-            <div class="description-box">
-                <h4>Retrocam</h4>
-                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                    elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
-            </div>
+    </div><!-- modal-02 End -->
 
-            <div class="link-box">
-                <a href="http://www.behance.net">Details</a>
-                <a class="popup-modal-dismiss">Close</a>
-            </div>
+    <div id="modal-03" class="popup-modal mfp-hide">
 
-        </div><!-- modal-01 End -->
+        <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt=""></img>
+
+        <div class="description-box">
+            <h4>Judah</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+        </div>
+
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
+
+    </div><!-- modal-03 End -->
+
+    <div id="modal-04" class="popup-modal mfp-hide">
+
+        <img class="scale-with-grid" src="images/portfolio/modals/m-intothelight.jpg" alt=""></img>
+
+        <div class="description-box">
+            <h4>Into the Light</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+        </div>
+
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
+
+    </div><!-- modal-04 End -->
+
+    <div id="modal-05" class="popup-modal mfp-hide">
+
+        <img class="scale-with-grid" src="images/portfolio/modals/m-farmerboy.jpg" alt=""></img>
+
+        <div class="description-box">
+            <h4>Farmer Boy</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+        </div>
+
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
+
+    </div><!-- modal-05 End -->
+
+    <div id="modal-06" class="popup-modal mfp-hide">
+
+        <img class="scale-with-grid" src="images/portfolio/modals/m-girl.jpg" alt=""></img>
+
+        <div class="description-box">
+            <h4>Girl</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+        </div>
+
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
+
+    </div><!-- modal-06 End -->
+
+    <div id="modal-07" class="popup-modal mfp-hide">
+
+        <img class="scale-with-grid" src="images/portfolio/modals/m-origami.jpg" alt=""></img>
+
+        <div class="description-box">
+            <h4>Origami</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
+        </div>
+
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
+
+    </div><!-- modal-07 End -->
+
+    <div id="modal-08" class="popup-modal mfp-hide">
+
+        <img class="scale-with-grid" src="images/portfolio/modals/m-retrocam.jpg" alt=""></img>
+
+        <div class="description-box">
+            <h4>Retrocam</h4>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
+                elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+            <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
+        </div>
+
+        <div class="link-box">
+            <a href="http://www.behance.net">Details</a>
+            <a class="popup-modal-dismiss">Close</a>
+        </div>
+
+    </div><!-- modal-01 End -->
 
 
     </div> <!-- row End -->
@@ -631,7 +635,7 @@
         <div class="eight columns">
 
             <!-- form -->
-            <form action="/contactUs" method="post" id="contactForm" name="contactForm">
+            <form action="/users/contactUs" method="post" id="contactForm" name="contactForm">
                 <fieldset>
 
                     <div>

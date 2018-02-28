@@ -50,5 +50,7 @@ public class Skill {
                 ", style='" + style + '\'' +
                 '}';
     }
+
+
 }
 

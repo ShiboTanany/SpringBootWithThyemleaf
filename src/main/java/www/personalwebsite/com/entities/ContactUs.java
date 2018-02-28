@@ -44,4 +44,10 @@ public class ContactUs {
     public void setDescription(String description) {
         Description = description;
     }
+
+    public ContactUs(String fullName, String email, String description) {
+        this.fullName = fullName;
+        this.email = email;
+        Description = description;
+    }
 }

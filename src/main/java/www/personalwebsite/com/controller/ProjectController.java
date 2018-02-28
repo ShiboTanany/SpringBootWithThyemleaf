@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import www.personalwebsite.com.Services.ProjectService;
+import www.personalwebsite.com.entities.Post;
 import www.personalwebsite.com.entities.Project;
 import www.personalwebsite.com.entities.Skill;
 
@@ -18,6 +19,7 @@ import java.io.InputStream;
 import java.util.*;
 
 @Controller
+@RequestMapping("/users")
 public class ProjectController {
     @Autowired
     private ProjectService projectService;
@@ -49,39 +51,40 @@ public class ProjectController {
         return new ResponseEntity<Project>(project, httpStatus);
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String showHome(Map<String, Object> model,HttpServletRequest httpRequest) {
-
-        Enumeration<String> headerNames=httpRequest.getHeaderNames();
-        Map<String, String> map = new HashMap<>();
 
 
-        while (headerNames.hasMoreElements()) {
-            String key = (String) headerNames.nextElement();
-            String value = httpRequest.getHeader(key);
-            map.put(key, value);
-        }
-        System.out.println(httpRequest.getRemoteAddr());
-        map.forEach((s, s2) -> System.out.println(s+"***"+s2));
-
-
-        List<Skill>  skills=new ArrayList<>();
-        skills.add(new Skill(1,"Java","excellent"));
-        skills.add(new Skill(2,"Hibernate","veryGood"));
-        skills.add(new Skill(3,"Spring","good"));
-        skills.add(new Skill(3,"Hadoop","medium"));
-        skills.add(new Skill(3,"Spring Cloud ","good"));
-        skills.add(new Skill(3,"spring cache","knoweldge"));
-        skills.add(new Skill(3,"spring","heardAboutIt"));
-        model.put("skills", skills);
-
-        model.put("projects", "");
-        model.put("", "");
-        return "index";
-    }
     @RequestMapping(value = "/blog", method = RequestMethod.GET)
     public String showBLog(Map<String, Object> model) {
-        model.put("", "");
+        List<Post> posts=new ArrayList<>();
+
+        posts.add(new Post("Java","kjjjjjjjjjjjjjjdsjds" +
+                "dskjdskjdsd" +
+                "sdksjdksjdksj" +
+                "djksjdksjdksj" +
+                "sjkdjskdjsk"));
+        posts.add(new Post("Java","kjjjjjjjjjjjjjjdsjds" +
+                "dskjdskjdsd" +
+                "sdksjdksjdksj" +
+                "djksjdksjdksj" +
+                "sjkdjskdjsk"));
+        posts.add(new Post("Java","kjjjjjjjjjjjjjjdsjds" +
+                "dskjdskjdsd" +
+                "sdksjdksjdksj" +
+                "djksjdksjdksj" +
+                "sjkdjskdjskىةdssssssssssssssss" +
+                "sssssssssssssssssssssssss" +
+                "ds" +
+                "dsssssssssssssssssssssssssssss" +
+                "ssssssssssssssssssssssssssssss" +
+                "ssssssssssssssssssssssssssssss" +
+                "ssssssssssssssssss" +
+                "dsddddddddddddddddddddddddddddd" +
+                "dddddddddddddddddddddddddddddddd" +
+                "dddddddddddddddddddddddddddddddddddddd"));
+        System.out.println(">>>>>>>>>>>>>>>>"+posts.size());
+
+
+        model.put("posts", posts);
         return "blog";
     }
 
@@ -89,7 +92,7 @@ public class ProjectController {
     public void getFile(
 
             HttpServletResponse response) throws IOException {
-        String src= "main/resources/templates/files/cv.pdf";
+        String src = "main/resources/templates/files/cv.pdf";
         InputStream is = new FileInputStream(src);
         IOUtils.copy(is, response.getOutputStream());
         response.flushBuffer();
@@ -98,21 +101,10 @@ public class ProjectController {
     @RequestMapping(value = "/contactUs", method = RequestMethod.POST)
     public String sendContactUS(HttpServletRequest httpRequest) {
 
-        Enumeration<String> headerNames=httpRequest.getHeaderNames();
-        Map<String, String> map = new HashMap<>();
-
-
-        while (headerNames.hasMoreElements()) {
-            String key = (String) headerNames.nextElement();
-            String value = httpRequest.getHeader(key);
-            map.put(key, value);
-        }
-        System.out.println(httpRequest.getRemoteAddr());
-       map.forEach((s, s2) -> System.out.println(s+"***"+s2));
-
+        Enumeration<String> headerNames = httpRequest.getHeaderNames();
 
         System.out.println(httpRequest.getParameter("contactName"));
-              return "blog";
+        return "blog";
     }
 
 

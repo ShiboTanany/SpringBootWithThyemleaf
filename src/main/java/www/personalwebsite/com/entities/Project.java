@@ -16,6 +16,15 @@ public class Project {
     private String imageUrl;
     private String createdTime;
 
+
+    public Project(String name, String githubLink, String description, String imageUrl, String createdTime) {
+        this.name = name;
+        GithubLink = githubLink;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.createdTime = createdTime;
+    }
+
     public int getId() {
         return id;
     }
